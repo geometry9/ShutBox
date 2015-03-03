@@ -6,9 +6,6 @@ a { color: #00B7FF; }
 ul li{list-style: none;}
 
 
-.cards:after{
-  clear: both;
-}
 .card{ float: left; 
 	width: 30px; 
 	height: 30px; 
@@ -19,5 +16,18 @@ ul li{list-style: none;}
 	margin: 10px;
 	cursor: pointer;
 }
-
 .card.chosen{ border: 1px solid red;}
+.card.flipped { background: #000; color: #FFF; cursor: auto }
+
+.dice{ clear: both }
+.dice .die { 
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
+	line-height: 50px;
+	text-align: center;
+	margin: 10px;
+	display: inline-block;
+}
+// .dice .die:first-child { float: left }
+

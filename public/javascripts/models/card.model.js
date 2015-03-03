@@ -9,5 +9,13 @@ var Card = Backbone.Model.extend({
   });
   
 var Cards = Backbone.Collection.extend({
-    model: Card
+    model: Card,
+    total: function(){
+    	return this.reduce(function(memo, value) { 
+    		if(!value.get("flipped"))
+    			return memo + value.get("value");
+    		else
+    			return memo;
+    	}, 0);
+    }
 });
