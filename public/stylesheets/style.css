@@ -17,6 +17,7 @@ ul li{list-style: none;}
 	padding: 5px;
 	text-align: center;
 	margin: 10px;
+	cursor: pointer;
 }
 
-.card.chosen{}
+.card.chosen{ border: 1px solid red;}

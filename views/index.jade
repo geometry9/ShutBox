@@ -1,16 +1,18 @@
 extends layout
 
 block content
-    ul(class="cards")
-        li(class="card") 1
-        li(class="card") 2
-        li(class="card") 3
-        li(class="card") 4
-        li(class="card") 5
-        li(class="card") 6
-        li(class="card") 7
-        li(class="card") 8
-        li(class="card") 9
+    div(class="cards")
+        ul
+            li(class="card") 1
+            li(class="card") 2
+            li(class="card") 3
+            li(class="card") 4
+            li(class="card") 5
+            li(class="card") 6
+            li(class="card") 7
+            li(class="card") 8
+            li(class="card") 9
+        button(class="pick-play btn btn-primary") Submit Play
     
     div(class="dice")
         div(class="die")
@@ -18,7 +20,7 @@ block content
         button(class="roll btn btn-primary") Roll Dice
     div(class="controls")
         
-        button(class="pick-play btn btn-primary") Submit Play
+        
         button(class="end-round btn btn-primary") End Round
 
 
