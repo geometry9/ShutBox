@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.css')
+    script(src="/components/underscore/underscore.js")
+    script(src="/components/jquery/dist/jquery.js")
+    script(src='/components/bootstrap/dist/js/bootstrap.js')
+    script(src='/components/backbone/backbone.js')
+    script(src='/javascripts/views/dice.view.js')
+
+  body
+    h1 Welcome to Shut the Box
+    p Play by rolling the dice and choosing a set of numbers that add up to the sum of the dice.
+    block content
