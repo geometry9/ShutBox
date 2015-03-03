@@ -1,29 +1,31 @@
   //cards view
-  var DiceView = Backbone.View.extend({
-    el: '.dice',
+  var CardsView = Backbone.View.extend({
+    el: '.cards',
     events: {
-      'click .roll': 'rollDice'
+      'click .submit-play': 'submitPlay',
+      'click .card': 'addPlay'
     },
     initialize: function(){
-       _.bindAll(this, 'render'); // every function that uses 'this' as the current object should be in here
+      _.bindAll(this, 'render');
+      this.collection = new Cards(); // every function that uses 'this' as the current object should be in here
       this.render();
     },
     render: function(){
       //console.log($(this.el));
-      console.log($(this.el).find('.die'))
-      $(this.el).find('.die').text(0);
-    },
-    rollDice: function(e){
-      var self = this;
-      $(this.el).find('.die').each(function(){
-        $(this).text(self.rand());
-      });
       
+      for(var i=1;i < 10;i++){
+        this.collection.add(new Card({value: i, flipped: false}));
+      }
+      console.log(this.collection);
     },
-    rand: function(){
-      return Math.floor(Math.random() * (6 - 1 +1)) + 1;
+    addPlay: function(){
+
+    },
+    submitPlay: function(){
+
     }
+    
   });
 $(document).ready(function(){
-  var diceView = new DiceView();
+  var cardsView = new CardsView();
 });
